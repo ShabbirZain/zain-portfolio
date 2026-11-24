@@ -4,9 +4,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Zain Shabbir | .NET & Angular Developer</title>
-<meta name="description" content="Zain Shabbir - Professional .NET and Angular Developer with 3+ years of experience.">
+<meta name="description" content="Zain Shabbir - .NET and Angular Developer with 3+ years of software development experience.">
+<title>Zain Shabbir | Software Developer</title>
 
 <style>
 * {
@@ -19,7 +18,7 @@
 body {
     font-family: Arial, sans-serif;
     background: #0b1120;
-    color: #f8fafc;
+    color: #f1f5f9;
     line-height: 1.7;
 }
 
@@ -34,6 +33,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 10;
+    border-bottom: 1px solid #26364f;
 }
 
 .logo {
@@ -45,7 +45,7 @@ header {
 nav a {
     color: #e2e8f0;
     text-decoration: none;
-    margin: 0 9px;
+    margin: 0 8px;
     font-size: 14px;
 }
 
@@ -73,9 +73,10 @@ section {
     min-width: 260px;
 }
 
-.hero-content .intro {
+.intro {
     color: #38bdf8;
     font-weight: bold;
+    letter-spacing: 3px;
 }
 
 .hero h1 {
@@ -86,13 +87,13 @@ section {
 
 .hero h2 {
     color: #38bdf8;
-    font-size: 24px;
+    font-size: 23px;
     margin-bottom: 18px;
 }
 
 .hero p {
     color: #cbd5e1;
-    max-width: 580px;
+    max-width: 570px;
 }
 
 .profile-image {
@@ -100,9 +101,9 @@ section {
     height: 340px;
     object-fit: cover;
     object-position: center 25%;
-    border-radius: 25px;
+    border-radius: 24px;
     border: 4px solid #38bdf8;
-    box-shadow: 0 15px 45px rgba(56,189,248,.18);
+    box-shadow: 0 15px 45px rgba(56,189,248,.2);
 }
 
 .btn {
@@ -129,12 +130,12 @@ section {
 .section-title {
     color: #38bdf8;
     font-size: 30px;
-    margin-bottom: 25px;
+    margin-bottom: 12px;
 }
 
 .subtitle {
     color: #94a3b8;
-    margin-bottom: 25px;
+    margin-bottom: 28px;
 }
 
 .card {
@@ -143,6 +144,11 @@ section {
     border-radius: 13px;
     padding: 25px;
     margin-bottom: 18px;
+    transition: transform .2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
 }
 
 .card h3 {
@@ -173,13 +179,13 @@ section {
     text-align: center;
 }
 
+.contact p {
+    margin: 12px 0;
+}
+
 .contact a:not(.btn) {
     color: #38bdf8;
     text-decoration: none;
-}
-
-.contact p {
-    margin: 12px 0;
 }
 
 footer {
@@ -187,6 +193,7 @@ footer {
     text-align: center;
     padding: 25px;
     color: #94a3b8;
+    border-top: 1px solid #26364f;
 }
 
 @media(max-width: 700px) {
@@ -239,6 +246,7 @@ footer {
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
+        <a href="#services">Services</a>
         <a href="#contact">Contact</a>
     </nav>
 </header>
@@ -254,11 +262,9 @@ footer {
         <h2>.NET & Angular Developer</h2>
 
         <p>
-            I am a Software Developer with 3+ years of
-            professional experience building web applications,
+            Software Developer with 3+ years of professional
+            experience in building modern web applications,
             REST APIs and database-driven business solutions.
-            I enjoy turning business requirements into
-            reliable software.
         </p>
 
         <a class="btn" href="#contact">Hire Me</a>
@@ -266,10 +272,9 @@ footer {
     </div>
 
     <div>
-        <img
-            src="profile.png"
-            alt="Zain Shabbir - Software Developer"
-            class="profile-image">
+        <img src="profile.png"
+             alt="Zain Shabbir - Software Developer"
+             class="profile-image">
     </div>
 
 </section>
@@ -279,11 +284,13 @@ footer {
 
     <h2 class="section-title">About Me</h2>
 
+    <p class="subtitle">A little introduction about myself</p>
+
     <div class="card">
         <p>
             I am a Software Developer based in Lahore, Pakistan,
             with 3+ years of professional experience in
-            web application development.
+            software and web application development.
         </p>
 
         <p>
@@ -292,15 +299,14 @@ footer {
         </p>
 
         <p>
-            I focus on building secure, scalable and
+            I focus on developing secure, scalable and
             user-friendly applications that help businesses
-            manage their operations efficiently.
+            improve their operations.
         </p>
 
         <p>
-            I am interested in freelance projects,
-            remote development opportunities and
-            software development collaborations.
+            I am available for freelance projects,
+            remote development and software collaborations.
         </p>
     </div>
 
@@ -311,9 +317,7 @@ footer {
 
     <h2 class="section-title">Technical Skills</h2>
 
-    <p class="subtitle">
-        Technologies and tools I work with.
-    </p>
+    <p class="subtitle">Technologies and tools I work with</p>
 
     <div class="skills">
         <span class="skill">C#</span>
@@ -344,19 +348,20 @@ footer {
     <h2 class="section-title">My Projects</h2>
 
     <p class="subtitle">
-        Selected development work and application experience.
+        Selected software development work and application experience
     </p>
 
     <div class="card">
         <h3>01. MAMS - Inventory & Sales Management System</h3>
         <p>
-            A business management application for managing
+            Business management application for managing
             inventory, sales, customer credits, deposits
             and business transactions.
         </p>
         <p>
-            <strong>Modules:</strong> Inventory, Sales,
-            Customer Records, Credits, Deposits and Reports.
+            <strong>Modules:</strong>
+            Inventory, Sales, Customer Records, Credits,
+            Deposits and Reports.
         </p>
         <p>
             <strong>Technologies:</strong>
@@ -367,13 +372,14 @@ footer {
     <div class="card">
         <h3>02. Study Abroad Management System</h3>
         <p>
-            A web-based application supporting student
+            Web-based application supporting student
             management, study abroad applications
             and administrative operations.
         </p>
         <p>
-            <strong>Modules:</strong> Student Records,
-            Application Tracking and Admin Management.
+            <strong>Modules:</strong>
+            Student Records, Application Tracking
+            and Admin Management.
         </p>
         <p>
             <strong>Technologies:</strong>
@@ -389,8 +395,9 @@ footer {
             and database integration.
         </p>
         <p>
-            <strong>Focus:</strong> Website Development,
-            Backend Logic and Database Integration.
+            <strong>Focus:</strong>
+            Website Development, Backend Logic
+            and Database Integration.
         </p>
         <p>
             <strong>Technologies:</strong>
@@ -406,8 +413,9 @@ footer {
             email integration and transaction logging.
         </p>
         <p>
-            <strong>Focus:</strong> Background Services,
-            Notifications, Transaction Processing and Logging.
+            <strong>Focus:</strong>
+            Background Services, Notifications,
+            Transaction Processing and Logging.
         </p>
         <p>
             <strong>Technologies:</strong>
@@ -418,14 +426,14 @@ footer {
     <div class="card">
         <h3>05. Daily Work Monitoring System</h3>
         <p>
-            A web application for recording employee
+            Web application for recording employee
             daily activities, monitoring work progress
             and managing work-related comments.
         </p>
         <p>
-            <strong>Modules:</strong> Employee Login,
-            Daily Work Entries, Categories,
-            Manager Access and Comments.
+            <strong>Modules:</strong>
+            Employee Login, Daily Work Entries,
+            Categories, Manager Access and Comments.
         </p>
         <p>
             <strong>Technologies:</strong>
@@ -451,8 +459,8 @@ footer {
     <div class="card">
         <h3>REST API Development</h3>
         <p>
-            Secure APIs, authentication,
-            backend services and database integration.
+            Secure APIs, authentication, backend services
+            and database integration.
         </p>
     </div>
 
@@ -467,8 +475,8 @@ footer {
     <div class="card">
         <h3>Database Development</h3>
         <p>
-            SQL Server database design,
-            stored procedures and query optimization.
+            SQL Server database design, stored procedures
+            and query optimization.
         </p>
     </div>
 
