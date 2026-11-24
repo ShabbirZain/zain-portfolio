@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zain Shabbir | .NET Developer</title>
+    <meta name="description" content="Professional .NET and Angular Developer Portfolio">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #f8fafc;
+            line-height: 1.7;
+        }
+        header {
+            padding: 20px;
+            text-align: center;
+            background: #111c32;
+        }
+        header h2 { color: #38bdf8; margin: 0; }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+        section {
+            max-width: 900px;
+            margin: auto;
+            padding: 55px 22px;
+        }
+        .hero { text-align: center; padding-top: 85px; }
+        h1 { font-size: 38px; line-height: 1.2; }
+        h2 { color: #38bdf8; }
+        .highlight { color: #38bdf8; }
+        .btn {
+            display: inline-block;
+            background: #0284c7;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 7px;
+            text-decoration: none;
+            margin-top: 15px;
+        }
+        .card {
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 12px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #111c32;
+        }
+        @media(max-width:600px) {
+            h1 { font-size: 30px; }
+            nav a { margin: 0 5px; }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>Zain Shabbir</h2>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Hi, I'm <span class="highlight">Zain Shabbir</span></h1>
+    <h2>.NET & Angular Developer</h2>
+    <p>
+        I build professional web applications, REST APIs
+        and database-driven business solutions.
+    </p>
+    <a class="btn" href="#contact">Hire Me</a>
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+        <p>
+            I am a Software Developer with 3+ years of
+            professional experience in web development.
+            I specialize in ASP.NET Core, C#, Angular
+            and SQL Server.
+        </p>
+        <p>
+            My focus is building secure, responsive and
+            reliable web applications for businesses.
+        </p>
+    </div>
+</section>
+
+<section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="card">
+        <p>C# | ASP.NET Core | MVC | Web API</p>
+        <p>Angular | HTML | CSS | JavaScript</p>
+        <p>SQL Server | Dapper | JWT</p>
+        <p>REST APIs | IIS Deployment | Git</p>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Services & Project Experience</h2>
+
+    <div class="card">
+        <h3>Business Management Applications</h3>
+        <p>Web-based solutions for managing business operations and records.</p>
+    </div>
+
+    <div class="card">
+        <h3>ASP.NET Core Web Applications</h3>
+        <p>Custom web applications, admin panels and backend development.</p>
+    </div>
+
+    <div class="card">
+        <h3>REST API Development</h3>
+        <p>Secure APIs using ASP.NET Core, SQL Server and JWT authentication.</p>
+    </div>
+
+    <div class="card">
+        <h3>Angular Frontend Development</h3>
+        <p>Responsive and user-friendly frontend applications.</p>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Let's Work Together</h2>
+    <div class="card">
+        <p>Have a project or need a .NET developer?</p>
+        <p>Email: YOUR_EMAIL@example.com</p>
+        <a class="btn" href="mailto:YOUR_EMAIL@example.com">
+            Contact Me
+        </a>
+    </div>
+</section>
+
+<footer>
+    <p>© <span id="year"></span> Zain Shabbir. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+<script>
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+</script>
+
+</body>
+  </html>
+  
