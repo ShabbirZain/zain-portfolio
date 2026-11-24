@@ -4,10 +4,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Zain Shabbir - .NET and Angular Developer with 3+ years of software development experience.">
-<title>Zain Shabbir | Software Developer</title>
+<meta name="description" content="Zain Shabbir - .NET and Angular Software Developer specializing in ASP.NET Core, Web API, Angular and SQL Server.">
+<title>Zain Shabbir | Software Engineer</title>
 
 <style>
+:root {
+    --bg: #080d19;
+    --surface: #101a2d;
+    --card: #121f35;
+    --blue: #38bdf8;
+    --cyan: #67e8f9;
+    --white: #f8fafc;
+    --muted: #94a3b8;
+    --border: rgba(148,163,184,.16);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -16,223 +27,439 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: #0b1120;
-    color: #f1f5f9;
+    font-family: Inter, "Segoe UI", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--white);
     line-height: 1.7;
 }
 
+a { color: inherit; }
+
+.container {
+    width: min(1120px, 90%);
+    margin: auto;
+}
+
 header {
-    background: #111c32;
-    padding: 18px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(8,13,25,.93);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
+}
+
+.nav {
+    min-height: 75px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    border-bottom: 1px solid #26364f;
+    gap: 20px;
 }
 
 .logo {
-    color: #38bdf8;
     font-size: 23px;
-    font-weight: bold;
+    font-weight: 800;
+    letter-spacing: -.8px;
+}
+
+.logo span { color: var(--blue); }
+
+nav {
+    display: flex;
+    gap: 25px;
 }
 
 nav a {
-    color: #e2e8f0;
+    color: var(--muted);
     text-decoration: none;
-    margin: 0 8px;
     font-size: 14px;
+    transition: .2s;
 }
 
-nav a:hover {
-    color: #38bdf8;
-}
-
-section {
-    max-width: 1100px;
-    margin: auto;
-    padding: 75px 22px;
-}
+nav a:hover { color: var(--blue); }
 
 .hero {
-    min-height: 580px;
-    display: flex;
+    min-height: 660px;
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
     align-items: center;
-    justify-content: center;
     gap: 55px;
-    flex-wrap: wrap;
+    padding-top: 75px;
+    padding-bottom: 75px;
 }
 
-.hero-content {
-    flex: 1;
-    min-width: 260px;
-}
-
-.intro {
-    color: #38bdf8;
-    font-weight: bold;
+.eyebrow {
+    color: var(--blue);
+    font-size: 13px;
     letter-spacing: 3px;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .hero h1 {
-    font-size: 46px;
-    line-height: 1.2;
-    margin: 12px 0;
+    font-size: clamp(40px, 6vw, 66px);
+    line-height: 1.12;
+    margin: 18px 0;
+    letter-spacing: -2px;
+}
+
+.hero h1 span {
+    color: var(--blue);
 }
 
 .hero h2 {
-    color: #38bdf8;
     font-size: 23px;
-    margin-bottom: 18px;
+    color: #cbd5e1;
+    font-weight: 500;
+    margin-bottom: 20px;
 }
 
 .hero p {
-    color: #cbd5e1;
-    max-width: 570px;
+    max-width: 580px;
+    color: var(--muted);
+    font-size: 16px;
 }
 
-.profile-image {
-    width: 290px;
-    height: 340px;
-    object-fit: cover;
-    object-position: center 25%;
-    border-radius: 24px;
-    border: 4px solid #38bdf8;
-    box-shadow: 0 15px 45px rgba(56,189,248,.2);
+.actions {
+    display: flex;
+    gap: 13px;
+    flex-wrap: wrap;
+    margin-top: 30px;
 }
 
 .btn {
-    display: inline-block;
-    padding: 12px 23px;
-    margin: 20px 8px 0 0;
-    background: #0284c7;
-    color: white;
-    border-radius: 7px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 22px;
+    border-radius: 8px;
     text-decoration: none;
-    font-weight: bold;
+    font-size: 14px;
+    font-weight: 700;
+    transition: .25s;
 }
 
-.btn:hover {
-    background: #0369a1;
+.primary {
+    background: var(--blue);
+    color: #07111e;
 }
 
-.outline-btn {
-    background: transparent;
-    border: 1px solid #38bdf8;
-    color: #38bdf8;
+.primary:hover {
+    background: var(--cyan);
+    transform: translateY(-3px);
 }
 
-.section-title {
-    color: #38bdf8;
-    font-size: 30px;
-    margin-bottom: 12px;
+.secondary {
+    border: 1px solid var(--border);
+    color: var(--white);
 }
 
-.subtitle {
-    color: #94a3b8;
-    margin-bottom: 28px;
+.secondary:hover {
+    border-color: var(--blue);
+    color: var(--blue);
 }
 
-.card {
-    background: #172338;
-    border: 1px solid #26364f;
-    border-radius: 13px;
-    padding: 25px;
-    margin-bottom: 18px;
-    transition: transform .2s;
+.photo-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 370px;
+    margin: auto;
 }
 
-.card:hover {
-    transform: translateY(-4px);
+.photo-frame {
+    padding: 10px;
+    border: 1px solid rgba(56,189,248,.5);
+    border-radius: 22px;
+    background: linear-gradient(145deg,#172d4b,#101a2d);
+    box-shadow: 0 25px 70px rgba(0,0,0,.35);
 }
 
-.card h3 {
-    color: #38bdf8;
-    margin-bottom: 10px;
+.profile {
+    width: 100%;
+    height: 420px;
+    display: block;
+    object-fit: cover;
+    object-position: center 23%;
+    border-radius: 15px;
 }
 
-.card p {
-    color: #cbd5e1;
-    margin-bottom: 8px;
+.photo-caption {
+    position: absolute;
+    bottom: 25px;
+    left: -25px;
+    background: #101a2d;
+    border: 1px solid var(--border);
+    padding: 13px 18px;
+    border-radius: 10px;
+    font-size: 13px;
+    box-shadow: 0 10px 35px #0008;
 }
 
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
+.photo-caption strong {
+    color: var(--blue);
+    display: block;
+}
+
+.section {
+    padding: 85px 0;
+    border-top: 1px solid var(--border);
+}
+
+.section-label {
+    color: var(--blue);
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.section h2 {
+    font-size: 34px;
+    margin: 8px 0 14px;
+    letter-spacing: -.8px;
+}
+
+.section-intro {
+    color: var(--muted);
+    max-width: 650px;
+    margin-bottom: 35px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 22px;
+}
+
+.panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 27px;
+    border-radius: 14px;
+}
+
+.panel p {
+    color: var(--muted);
+    margin-bottom: 14px;
+}
+
+.info-list {
+    display: grid;
+    gap: 15px;
+}
+
+.info-item {
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+}
+
+.info-item span {
+    color: var(--muted);
+    display: block;
+    font-size: 12px;
+}
+
+.info-item strong {
+    font-size: 14px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 14px;
 }
 
 .skill {
-    background: #172338;
-    border: 1px solid #334155;
-    padding: 10px 16px;
-    border-radius: 7px;
-    color: #e2e8f0;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 17px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    transition: .2s;
 }
 
-.contact {
+.skill:hover {
+    border-color: var(--blue);
+    color: var(--blue);
+    transform: translateY(-3px);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 18px;
+}
+
+.project {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    padding: 25px;
+    transition: .25s;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    border-color: rgba(56,189,248,.5);
+}
+
+.project-number {
+    color: var(--blue);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.project h3 {
+    margin: 10px 0;
+    font-size: 19px;
+}
+
+.project p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 18px;
+}
+
+.tag {
+    background: #1c304b;
+    color: #a5ddf7;
+    border-radius: 5px;
+    padding: 5px 9px;
+    font-size: 11px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 16px;
+}
+
+.service {
+    padding: 24px;
+    border-radius: 12px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+}
+
+.service .number {
+    font-size: 24px;
+    color: var(--blue);
+    font-weight: 800;
+}
+
+.service h3 {
+    margin: 12px 0;
+    font-size: 17px;
+}
+
+.service p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.contact-box {
+    background: linear-gradient(135deg,#102b46,#101a2d);
+    border: 1px solid rgba(56,189,248,.3);
+    padding: 45px 25px;
+    border-radius: 18px;
     text-align: center;
 }
 
-.contact p {
-    margin: 12px 0;
+.contact-box h2 {
+    font-size: 34px;
 }
 
-.contact a:not(.btn) {
-    color: #38bdf8;
+.contact-box p {
+    color: var(--muted);
+    margin: 12px auto;
+    max-width: 580px;
+}
+
+.contact-details {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact-details a {
+    color: var(--cyan);
     text-decoration: none;
+    font-size: 14px;
 }
 
 footer {
-    background: #111c32;
+    border-top: 1px solid var(--border);
+    padding: 25px 0;
     text-align: center;
-    padding: 25px;
-    color: #94a3b8;
-    border-top: 1px solid #26364f;
+    color: var(--muted);
+    font-size: 13px;
 }
 
-@media(max-width: 700px) {
-    header {
-        justify-content: center;
+@media(max-width:800px) {
+    .hero {
+        grid-template-columns: 1fr;
         text-align: center;
+        gap: 45px;
+    }
+
+    .hero p { margin: auto; }
+
+    .actions { justify-content: center; }
+
+    .photo-wrap { max-width: 300px; }
+
+    .profile { height: 350px; }
+
+    .about-grid { grid-template-columns: 1fr; }
+
+    .skills-grid { grid-template-columns: repeat(3,1fr); }
+
+    .services-grid { grid-template-columns: repeat(2,1fr); }
+}
+
+@media(max-width:520px) {
+    .nav {
+        flex-direction: column;
+        padding: 15px 0;
     }
 
     nav {
-        width: 100%;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
-    nav a {
-        display: inline-block;
-        margin: 5px;
-    }
+    nav a { font-size: 12px; }
 
-    .hero {
-        text-align: center;
-        padding-top: 55px;
-        gap: 30px;
-    }
+    .hero { padding-top: 55px; }
 
-    .hero h1 {
-        font-size: 34px;
-    }
+    .hero h1 { font-size: 40px; }
 
-    .hero p {
-        margin: auto;
-    }
+    .hero h2 { font-size: 19px; }
 
-    .profile-image {
-        width: 240px;
-        height: 280px;
-    }
+    .skills-grid { grid-template-columns: repeat(2,1fr); }
 
-    .section-title {
-        font-size: 26px;
-    }
+    .project-grid { grid-template-columns: 1fr; }
+
+    .services-grid { grid-template-columns: 1fr; }
+
+    .section { padding: 60px 0; }
+
+    .section h2 { font-size: 28px; }
+
+    .photo-caption { left: -5px; }
 }
 </style>
 </head>
@@ -240,303 +467,369 @@ footer {
 <body>
 
 <header>
-    <div class="logo">Zain Shabbir</div>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-    </nav>
+    <div class="container nav">
+        <div class="logo">Zain<span>.</span></div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
 </header>
 
-<!-- HOME -->
+<main>
+
+<!-- HERO -->
+<div class="container">
 <section class="hero" id="home">
 
     <div class="hero-content">
-        <p class="intro">HELLO, I'M</p>
+        <div class="eyebrow">Software Developer · Lahore, Pakistan</div>
 
-        <h1>Zain Shabbir</h1>
+        <h1>Building Digital<br>
+        <span>Solutions</span> That Work.</h1>
 
-        <h2>.NET & Angular Developer</h2>
+        <h2>Hi, I'm Zain Shabbir — .NET & Angular Developer</h2>
 
         <p>
-            Software Developer with 3+ years of professional
-            experience in building modern web applications,
-            REST APIs and database-driven business solutions.
+            I develop modern web applications, secure REST APIs
+            and database-driven business solutions using
+            Microsoft technologies. I turn complex requirements
+            into practical, reliable software.
         </p>
 
-        <a class="btn" href="#contact">Hire Me</a>
-        <a class="btn outline-btn" href="#projects">View Projects</a>
+        <div class="actions">
+            <a class="btn primary" href="#contact">Let's Work Together ↗</a>
+            <a class="btn secondary" href="#projects">Explore My Work</a>
+        </div>
     </div>
 
-    <div>
-        <img src="profile.png"
-             alt="Zain Shabbir - Software Developer"
-             class="profile-image">
+    <div class="photo-wrap">
+        <div class="photo-frame">
+            <img src="profile.png"
+                 class="profile"
+                 alt="Zain Shabbir - Software Developer">
+        </div>
+
+        <div class="photo-caption">
+            <strong>3+ Years Experience</strong>
+            Software Development
+        </div>
     </div>
 
 </section>
+</div>
 
 <!-- ABOUT -->
-<section id="about">
+<section class="section" id="about">
+<div class="container">
 
-    <h2 class="section-title">About Me</h2>
+    <div class="section-label">Introduction</div>
+    <h2>About Me</h2>
+    <p class="section-intro">
+        A developer focused on building useful,
+        maintainable and reliable software.
+    </p>
 
-    <p class="subtitle">A little introduction about myself</p>
+    <div class="about-grid">
 
-    <div class="card">
-        <p>
-            I am a Software Developer based in Lahore, Pakistan,
-            with 3+ years of professional experience in
-            software and web application development.
-        </p>
+        <div class="panel">
+            <p>
+                I'm Zain Shabbir, a Software Developer based
+                in Lahore, Pakistan, with over 3 years of
+                professional experience in web development.
+            </p>
 
-        <p>
-            My core expertise includes C#, ASP.NET Core,
-            ASP.NET MVC, Web API, Angular and Microsoft SQL Server.
-        </p>
+            <p>
+                My primary expertise is in C#, ASP.NET Core,
+                MVC, Web API, Angular and Microsoft SQL Server.
+                I enjoy developing backend systems,
+                integrating APIs and creating responsive
+                user experiences.
+            </p>
 
-        <p>
-            I focus on developing secure, scalable and
-            user-friendly applications that help businesses
-            improve their operations.
-        </p>
+            <p>
+                I believe in clean, maintainable code,
+                practical problem solving and delivering
+                solutions that meet business requirements.
+            </p>
+        </div>
 
-        <p>
-            I am available for freelance projects,
-            remote development and software collaborations.
-        </p>
+        <div class="panel info-list">
+            <div class="info-item">
+                <span>Name</span>
+                <strong>Zain Shabbir</strong>
+            </div>
+
+            <div class="info-item">
+                <span>Professional Role</span>
+                <strong>.NET & Angular Developer</strong>
+            </div>
+
+            <div class="info-item">
+                <span>Experience</span>
+                <strong>3+ Years</strong>
+            </div>
+
+            <div class="info-item">
+                <span>Location</span>
+                <strong>Lahore, Pakistan</strong>
+            </div>
+
+            <div class="info-item">
+                <span>Availability</span>
+                <strong>Freelance & Remote Projects</strong>
+            </div>
+        </div>
+
     </div>
-
+</div>
 </section>
 
 <!-- SKILLS -->
-<section id="skills">
+<section class="section" id="skills">
+<div class="container">
 
-    <h2 class="section-title">Technical Skills</h2>
+    <div class="section-label">My Expertise</div>
+    <h2>Technical Skills</h2>
+    <p class="section-intro">
+        Technologies and tools used in my software development work.
+    </p>
 
-    <p class="subtitle">Technologies and tools I work with</p>
-
-    <div class="skills">
-        <span class="skill">C#</span>
-        <span class="skill">ASP.NET Core</span>
-        <span class="skill">.NET 8</span>
-        <span class="skill">ASP.NET MVC</span>
-        <span class="skill">Web API</span>
-        <span class="skill">Angular</span>
-        <span class="skill">JavaScript</span>
-        <span class="skill">HTML5</span>
-        <span class="skill">CSS3</span>
-        <span class="skill">Bootstrap</span>
-        <span class="skill">SQL Server</span>
-        <span class="skill">Dapper</span>
-        <span class="skill">Stored Procedures</span>
-        <span class="skill">JWT Authentication</span>
-        <span class="skill">REST APIs</span>
-        <span class="skill">Git & GitHub</span>
-        <span class="skill">IIS Deployment</span>
-        <span class="skill">Background Services</span>
+    <div class="skills-grid">
+        <div class="skill">C#</div>
+        <div class="skill">ASP.NET Core</div>
+        <div class="skill">.NET 8</div>
+        <div class="skill">ASP.NET MVC</div>
+        <div class="skill">Web API</div>
+        <div class="skill">Angular</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">HTML5</div>
+        <div class="skill">CSS3</div>
+        <div class="skill">Bootstrap</div>
+        <div class="skill">SQL Server</div>
+        <div class="skill">Dapper</div>
+        <div class="skill">Stored Procedures</div>
+        <div class="skill">JWT Authentication</div>
+        <div class="skill">REST APIs</div>
+        <div class="skill">Git & GitHub</div>
+        <div class="skill">IIS Deployment</div>
+        <div class="skill">Background Services</div>
     </div>
 
+</div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects">
+<section class="section" id="projects">
+<div class="container">
 
-    <h2 class="section-title">My Projects</h2>
-
-    <p class="subtitle">
-        Selected software development work and application experience
+    <div class="section-label">Selected Work</div>
+    <h2>Projects & Experience</h2>
+    <p class="section-intro">
+        A selection of applications and software solutions
+        I have worked on.
     </p>
 
-    <div class="card">
-        <h3>01. MAMS - Inventory & Sales Management System</h3>
-        <p>
-            Business management application for managing
-            inventory, sales, customer credits, deposits
-            and business transactions.
-        </p>
-        <p>
-            <strong>Modules:</strong>
-            Inventory, Sales, Customer Records, Credits,
-            Deposits and Reports.
-        </p>
-        <p>
-            <strong>Technologies:</strong>
-            ASP.NET Core, C#, SQL Server.
-        </p>
-    </div>
+    <div class="project-grid">
 
-    <div class="card">
-        <h3>02. Study Abroad Management System</h3>
-        <p>
-            Web-based application supporting student
-            management, study abroad applications
-            and administrative operations.
-        </p>
-        <p>
-            <strong>Modules:</strong>
-            Student Records, Application Tracking
-            and Admin Management.
-        </p>
-        <p>
-            <strong>Technologies:</strong>
-            ASP.NET Core MVC, C#, SQL Server.
-        </p>
-    </div>
+        <article class="project">
+            <div class="project-number">PROJECT 01</div>
+            <h3>MAMS - Inventory & Sales Management</h3>
+            <p>
+                Business application for managing inventory,
+                sales, customer credits, deposits and
+                business transactions.
+            </p>
+            <div class="tags">
+                <span class="tag">ASP.NET Core</span>
+                <span class="tag">C#</span>
+                <span class="tag">SQL Server</span>
+            </div>
+        </article>
 
-    <div class="card">
-        <h3>03. Uneek Clothing - E-commerce Website</h3>
-        <p>
-            Full-stack website development for a clothing
-            business, including backend functionality
-            and database integration.
-        </p>
-        <p>
-            <strong>Focus:</strong>
-            Website Development, Backend Logic
-            and Database Integration.
-        </p>
-        <p>
-            <strong>Technologies:</strong>
-            ASP.NET Core, C#, SQL Server.
-        </p>
-    </div>
+        <article class="project">
+            <div class="project-number">PROJECT 02</div>
+            <h3>Study Abroad Management System</h3>
+            <p>
+                Web-based application for student records,
+                application tracking and administrative
+                operations.
+            </p>
+            <div class="tags">
+                <span class="tag">ASP.NET MVC</span>
+                <span class="tag">C#</span>
+                <span class="tag">SQL Server</span>
+            </div>
+        </article>
 
-    <div class="card">
-        <h3>04. SMS & Transaction Automation</h3>
-        <p>
-            Background processing solution involving
-            automated transaction handling, SMS notifications,
-            email integration and transaction logging.
-        </p>
-        <p>
-            <strong>Focus:</strong>
-            Background Services, Notifications,
-            Transaction Processing and Logging.
-        </p>
-        <p>
-            <strong>Technologies:</strong>
-            .NET Worker Service, C#, SQL Server.
-        </p>
-    </div>
+        <article class="project">
+            <div class="project-number">PROJECT 03</div>
+            <h3>Uneek Clothing - E-commerce</h3>
+            <p>
+                Full-stack website development, backend
+                functionality and database integration
+                for a clothing business.
+            </p>
+            <div class="tags">
+                <span class="tag">ASP.NET Core</span>
+                <span class="tag">C#</span>
+                <span class="tag">SQL Server</span>
+            </div>
+        </article>
 
-    <div class="card">
-        <h3>05. Daily Work Monitoring System</h3>
-        <p>
-            Web application for recording employee
-            daily activities, monitoring work progress
-            and managing work-related comments.
-        </p>
-        <p>
-            <strong>Modules:</strong>
-            Employee Login, Daily Work Entries,
-            Categories, Manager Access and Comments.
-        </p>
-        <p>
-            <strong>Technologies:</strong>
-            ASP.NET Core MVC, C#, SQL Server.
-        </p>
-    </div>
+        <article class="project">
+            <div class="project-number">PROJECT 04</div>
+            <h3>SMS & Transaction Automation</h3>
+            <p>
+                Background processing, transaction handling,
+                automated notifications and application logging.
+            </p>
+            <div class="tags">
+                <span class="tag">.NET Worker Service</span>
+                <span class="tag">C#</span>
+                <span class="tag">SQL Server</span>
+            </div>
+        </article>
 
+        <article class="project">
+            <div class="project-number">PROJECT 05</div>
+            <h3>Daily Work Monitoring System</h3>
+            <p>
+                Employee activity tracking, daily work entries,
+                manager access, categories and comments.
+            </p>
+            <div class="tags">
+                <span class="tag">ASP.NET Core MVC</span>
+                <span class="tag">C#</span>
+                <span class="tag">SQL Server</span>
+            </div>
+        </article>
+
+    </div>
+</div>
 </section>
 
 <!-- SERVICES -->
-<section id="services">
+<section class="section" id="services">
+<div class="container">
 
-    <h2 class="section-title">Services I Offer</h2>
+    <div class="section-label">What I Do</div>
+    <h2>Services</h2>
+    <p class="section-intro">
+        Development services for businesses and individuals.
+    </p>
 
-    <div class="card">
-        <h3>Custom Web Application Development</h3>
-        <p>
-            Business applications developed using
-            ASP.NET Core, C# and SQL Server.
-        </p>
+    <div class="services-grid">
+
+        <div class="service">
+            <div class="number">01</div>
+            <h3>Web Application Development</h3>
+            <p>
+                Custom business applications using
+                ASP.NET Core and SQL Server.
+            </p>
+        </div>
+
+        <div class="service">
+            <div class="number">02</div>
+            <h3>API Development</h3>
+            <p>
+                Secure REST APIs, backend services,
+                authentication and integrations.
+            </p>
+        </div>
+
+        <div class="service">
+            <div class="number">03</div>
+            <h3>Angular Development</h3>
+            <p>
+                Responsive frontend interfaces and
+                API integrations.
+            </p>
+        </div>
+
+        <div class="service">
+            <div class="number">04</div>
+            <h3>Database Development</h3>
+            <p>
+                SQL Server design, stored procedures
+                and query optimization.
+            </p>
+        </div>
+
+        <div class="service">
+            <div class="number">05</div>
+            <h3>Bug Fixing & Maintenance</h3>
+            <p>
+                Troubleshooting, feature enhancements
+                and application support.
+            </p>
+        </div>
+
+        <div class="service">
+            <div class="number">06</div>
+            <h3>Deployment & Integration</h3>
+            <p>
+                IIS deployment, API integration
+                and application configuration.
+            </p>
+        </div>
+
     </div>
-
-    <div class="card">
-        <h3>REST API Development</h3>
-        <p>
-            Secure APIs, authentication, backend services
-            and database integration.
-        </p>
-    </div>
-
-    <div class="card">
-        <h3>Angular Frontend Development</h3>
-        <p>
-            Responsive user interfaces and integration
-            with ASP.NET Core APIs.
-        </p>
-    </div>
-
-    <div class="card">
-        <h3>Database Development</h3>
-        <p>
-            SQL Server database design, stored procedures
-            and query optimization.
-        </p>
-    </div>
-
-    <div class="card">
-        <h3>Bug Fixing & Application Support</h3>
-        <p>
-            Existing application maintenance,
-            troubleshooting and feature enhancements.
-        </p>
-    </div>
-
+</div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="contact">
+<section class="section" id="contact">
+<div class="container">
 
-    <h2 class="section-title">Let's Work Together</h2>
+    <div class="contact-box">
+        <div class="section-label">Get In Touch</div>
 
-    <div class="card">
+        <h2>Have a Project in Mind?</h2>
 
         <p>
-            Have a project or need a .NET Developer?
-            Let's discuss how I can help.
+            I'm open to discussing freelance opportunities,
+            remote projects and software development
+            collaborations. Let's build something useful.
         </p>
 
-        <p>
-            <strong>Email:</strong>
+        <a class="btn primary"
+           href="mailto:zainshabbir509@gmail.com">
+            Send an Email ↗
+        </a>
+
+        <div class="contact-details">
             <a href="mailto:zainshabbir509@gmail.com">
                 zainshabbir509@gmail.com
             </a>
-        </p>
 
-        <p>
-            <strong>Mobile:</strong>
             <a href="tel:+923117037567">
-                03117037567
+                +92 311 7037567
             </a>
-        </p>
 
-        <a class="btn"
-           href="mailto:zainshabbir509@gmail.com">
-            Email Me
-        </a>
-
-        <a class="btn"
-           href="https://wa.me/923117037567"
-           target="_blank">
-            WhatsApp Me
-        </a>
-
+            <a href="https://wa.me/923117037567"
+               target="_blank">
+                WhatsApp
+            </a>
+        </div>
     </div>
 
+</div>
 </section>
 
+</main>
+
 <footer>
-    <p>
-        © <span id="year"></span> Zain Shabbir.
-        All Rights Reserved.
-    </p>
+<div class="container">
+    <p>© <span id="year"></span> Zain Shabbir. All rights reserved.</p>
     <p>Designed & Developed by Zain Shabbir</p>
+</div>
 </footer>
 
 <script>
